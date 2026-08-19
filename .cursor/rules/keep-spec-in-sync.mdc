@@ -1,0 +1,17 @@
+---
+description: Keep SPEC.md accurate whenever product behaviour changes
+alwaysApply: true
+---
+
+# Keep SPEC.md in sync
+
+Whenever you change behaviour, architecture, auth, APIs, data model, configuration,
+deployment, or iOS/server UX in this repo, update [`SPEC.md`](SPEC.md) in the
+**same change**.
+
+- Treat `SPEC.md` as the source of truth for how the system works *as built*.
+- Prefer editing the relevant section over appending a changelog.
+- Remove obsolete claims (do not leave “formerly…” cruft unless it explains a
+  deliberate design choice that still matters).
+- If `README.md` duplicates the same operator-facing detail, update that too.
+- Do not wait to be asked — updating the spec is part of finishing the task.
