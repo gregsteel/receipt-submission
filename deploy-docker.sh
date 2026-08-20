@@ -33,10 +33,6 @@ if [ ! -f "$ENV_FILE" ]; then
   echo "       cp .env.example .env.$APP_ENV   # then fill in auth values" >&2
   exit 1
 fi
-if ! grep -qE '^[[:space:]]*AP_API_TOKEN=.+' "$ENV_FILE"; then
-  echo "WARNING: AP_API_TOKEN is empty in $ENV_FILE — Cowork/MCP will fail." >&2
-fi
-
 HOST_DATA_DIR="${HOST_DATA_DIR:-$PWD/data}"
 mkdir -p "$HOST_DATA_DIR/files"
 

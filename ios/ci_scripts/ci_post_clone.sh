@@ -13,8 +13,7 @@ set -eu
 # Environment > Environment Variables > Add > name RECEIPTS_BUNDLE_ID,
 # value <your real bundle id, e.g. <domain-reverse>.receipts>. Neither this
 # nor RECEIPTS_DEFAULT_SERVER_URL below need Secret — a bundle id and a
-# server hostname are both already public (App Store listing, DNS), unlike
-# AP_API_TOKEN previously.
+# server hostname are both already public (App Store listing, DNS).
 
 if [ -z "${RECEIPTS_BUNDLE_ID:-}" ]; then
   echo "error: RECEIPTS_BUNDLE_ID is not set on this Xcode Cloud workflow" >&2

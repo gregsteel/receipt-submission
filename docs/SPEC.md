@@ -782,7 +782,7 @@ The same script optionally injects a second, also Plain, variable,
 §3.5. Unlike `RECEIPTS_BUNDLE_ID` this one isn't required: if it's unset the
 build proceeds and the app just shows its normal first-run setup screen.
 Neither variable needs Secret — a bundle id and a server hostname are already
-public, unlike a real credential such as the retired `AP_API_TOKEN` (§3).
+public, unlike a real credential (§3).
 
 ---
 

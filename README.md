@@ -126,7 +126,7 @@ Variables**, add:
 
 Neither needs **Secret** — mark both **Plain**. A bundle id and a server
 hostname are already public (App Store listing, DNS); they're not
-credentials the way `AP_API_TOKEN` was. Missing `RECEIPTS_BUNDLE_ID` fails
+credentials. Missing `RECEIPTS_BUNDLE_ID` fails
 the build loudly; missing `RECEIPTS_DEFAULT_SERVER_URL` just leaves the app's
 normal manual setup screen in place.
 
