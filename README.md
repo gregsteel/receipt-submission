@@ -30,7 +30,7 @@ cp .env.example .env.prod
 ```
 
 does a fresh image build and (re)starts the `receipt-submission` container on
-port **8788** with `--restart unless-stopped`. Secrets come from
+port **55666** with `--restart unless-stopped`. Secrets come from
 `.env.$APP_ENV` at run time and are never baked into the image
 (`.dockerignore` excludes `.env*`). Receipt files live in `./data` on the host
 (`DATA_DIR` inside the container is `/app/data`).

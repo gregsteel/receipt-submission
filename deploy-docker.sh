@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fresh build & deploy of Receipt Submission to the local Docker host.
 #
-#   ./deploy-docker.sh                  # build and (re)start on port 8788 (.env.local)
+#   ./deploy-docker.sh                  # build and (re)start on port 55666 (.env.local)
 #   ./deploy-docker.sh prod             # use .env.prod instead of .env.local
 #   PORT=9000 ./deploy-docker.sh        # different host port
 #
@@ -15,7 +15,7 @@ cd "$(dirname "$0")"
 
 IMAGE=receipt-submission
 CONTAINER="${CONTAINER:-receipt-submission}"
-PORT="${PORT:-8788}"
+PORT="${PORT:-55666}"
 # Env name from the first argument, falling back to $APP_ENV, then "local".
 APP_ENV="${1:-${APP_ENV:-local}}"
 ENV_FILE="${ENV_FILE:-$PWD/.env.$APP_ENV}"

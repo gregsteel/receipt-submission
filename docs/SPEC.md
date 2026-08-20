@@ -754,7 +754,7 @@ Connect rejects the upload. There is no build-time server URL — see §3.5.
 ### 10.3 Deployment
 
 `./deploy-docker.sh [env]` builds the image and restarts the
-`receipt-submission` container on port **8788** with `--restart unless-stopped`.
+`receipt-submission` container on port **55666** with `--restart unless-stopped`.
 Secrets are read from `.env.$APP_ENV` at run time and never baked in
 (`.dockerignore` excludes `.env*`); `./data` is bind-mounted to `/app/data`.
 
@@ -796,7 +796,7 @@ Known and accepted, in rough order of significance:
   filesystem permissions.
 - **Held receipts sit unencrypted** in the app's Documents directory, covered by
   iOS data protection and device passcode only.
-- **TLS is the reverse proxy's job.** The container serves plain HTTP on 8788 and
+- **TLS is the reverse proxy's job.** The container serves plain HTTP on 55666 and
   must not be exposed directly.
 
 ---

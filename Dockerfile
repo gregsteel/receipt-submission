@@ -19,7 +19,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV PORT=8788
+ENV PORT=55666
 ENV HOSTNAME=0.0.0.0
 ENV DATA_DIR=/app/data
 
@@ -33,7 +33,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
-EXPOSE 8788
+EXPOSE 55666
 
 HEALTHCHECK --interval=60s --timeout=5s --start-period=20s \
   CMD node -e "fetch('http://127.0.0.1:55666/health').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
