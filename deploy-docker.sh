@@ -45,7 +45,7 @@ DOCKER_ENV=(-e "TZ=$TZ_NAME" --env-file "$ENV_FILE" -e "APP_ENV=$APP_ENV" -e "DA
 docker run -d \
   --name "$CONTAINER" \
   --restart unless-stopped \
-  -p "$PORT:8788" \
+  -p "$PORT:55666" \
   -v "$HOST_DATA_DIR:/app/data" \
   "${DOCKER_ENV[@]}" \
   "$IMAGE" >/dev/null

@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(
       new URL(
         `/login?error=${encodeURIComponent("Auth is not configured")}`,
-        process.env.GOOGLE_REDIRECT_URI || "http://localhost:8788",
+        process.env.GOOGLE_REDIRECT_URI || "http://localhost:55666",
       ),
     );
   }

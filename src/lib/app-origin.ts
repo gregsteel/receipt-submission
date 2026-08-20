@@ -8,7 +8,7 @@ export function appOrigin(): string {
       /* fall through */
     }
   }
-  return "http://localhost:8788";
+  return "http://localhost:55666";
 }
 
 /** MCP resource identifier — must match the URL entered in Claude. */

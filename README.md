@@ -43,7 +43,7 @@ Useful checks after deploy:
 
 ```bash
 docker ps --filter name=receipt-submission
-curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8788/health
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:55666/health
 ```
 
 ### Environment variables
@@ -84,7 +84,7 @@ stays exactly as before, this is additive. See
 ```bash
 cp .env.example .env.local
 npm install
-npm run dev   # http://localhost:8788
+npm run dev   # http://localhost:55666
 ```
 
 Camera access needs a secure context (HTTPS or localhost).

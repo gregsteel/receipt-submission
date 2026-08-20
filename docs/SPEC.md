@@ -54,7 +54,7 @@ home server behind an HTTPS reverse proxy.
  iPhone (Receipts.app)                          Claude Cowork
    │                                                  │
    │ POST /api/send            ┌──────────────────┐   │ POST /mcp
-   │ (session JWT, Bearer)     │  Next.js :8788   │   │ (OAuth access token)
+   │ (session JWT, Bearer)     │  Next.js :55666   │   │ (OAuth access token)
    ├──────────────────────────▶│                  │◀──┤
    │                           │  $DATA_DIR       │
    │ on failure:               │   receipts.db    │
